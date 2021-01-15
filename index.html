@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+  </head>
+<body>
+
+	<style>
+    body {
+      background-image: url('2.png');
+      background-size: cover;
+    }
+
+    #b1{
+      border-top-left-radius: 5px; 
+      border-bottom-left-radius: 5px;
+       margin-right:-4px;
+       } 
+
+    #b2{
+      border-top-right-radius: 5px;
+       border-bottom-right-radius: 5px;
+       margin-left:-3px;
+
+        }
+
+    button{
+      border: 3px solid skyblue;
+      background-color: rgba(0,0,0,0); 
+      color: skyblue;
+      padding: 5px;
+        }
+
+        button:hover{
+           color:white; 
+           background-color: skyblue; 
+           }
+
+
+    img {
+      border: 3px solid white;
+      border-radius: 7px;
+      -moz-border-radius: 7px;
+      -khtml-border-radius: 7px;
+      -webkit-border-radius: 7px;
+    }
+
+	@keyframes loop{
+    0%{
+    	top:0px;
+    	left:0px;
+    }
+    50%{
+    	top:0px;
+    	left:300px;
+    }
+    100%{
+        top:0px;
+        left:0px;    
+    }
+}
+
+.sc{
+	position: relative;
+   	width: 100px;
+   	height: 110px;
+	animation: loop 1.1s infinite;
+}
+  </style>
+    <div style="text-align: center;">
+      <img id="img" src="1.jpg"style="margin-left: auto; margin-right: auto; display: block;"/>
+      <button onclick="back()" id="b1">이전</button>
+      <button onclick="suan()" id="b2">다음</button>
+      </div>
+      <img src="1.png" class="sc" width="40px" height="40px"/>
+    <script>
+      function suan() {
+	        document.getElementById("img").src = "2.jpg";
+	       document.getElementById("img").style.width = "320px";
+
+      }
+
+      function back() {
+ 	       document.getElementById("img").src = "1.jpg";
+	       document.getElementById("img").style.width = "320px";
+    }
+    </script>
+  </body>
+</html>
